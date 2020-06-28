@@ -139,7 +139,7 @@ export default function filesize(options = {}, env) {
 					if (typeof reporter === "string") {
 						let p;
 						if (reporter === "boxen") {
-							p = import(thisDirectory + "/reporters/boxen.js");
+							p = import(join(thisDirectory, "/reporters/boxen.js"));
 						} else {
 							p = import(fixWindowsPath(pathResolve(process.cwd(), reporter)));
 						}
